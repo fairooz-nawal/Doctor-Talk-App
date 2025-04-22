@@ -1,8 +1,8 @@
 import React from 'react';
 import { BiRegistered } from "react-icons/bi";
+import { Link } from 'react-router';
 const Doctor = ({ singleDoc }) => {
-    console.log(singleDoc)
-    const { image, experience, name, education, specialty,registration_number } = singleDoc;
+    const { id,image, experience, name, education, specialty,registration_number } = singleDoc;
     return (
         <div className="card bg-base-100 shadow-sm p-5 rounded-3xl">
             <figure className="">
@@ -26,7 +26,7 @@ const Doctor = ({ singleDoc }) => {
                 </div>
                 
                 <div className="card-actions">
-                    <button className="btn border-blue-700 text-blue-500 bg-white rounded-3xl w-full">View Details</button>
+                    <Link to={`detail/${id}`}><button className="btn border-blue-700 text-blue-500 bg-white rounded-3xl w-full">View Details</button></Link>
                 </div>
                 
             </div>

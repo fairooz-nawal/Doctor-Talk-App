@@ -9,6 +9,7 @@ import Blogs from '../Pages/Blogs/Blogs';
 import Contact from '../Pages/Contact/Contact';
 import Home from '../Pages/home/Home';
 import Error from '../Pages/Error/Error';
+import DoctorDetail from '../Pages/home/DoctorDetail';
 const router = createBrowserRouter([
     {
       path: "/",
@@ -17,10 +18,7 @@ const router = createBrowserRouter([
         {
           index:true,
           path:"/",
-          Component:Home
-        },
-        {
-          path:"/home",
+          // @ts-ignore
           Component:Home
         },
         {
@@ -34,6 +32,10 @@ const router = createBrowserRouter([
         {
           path:"/contactUs",
           Component:Contact
+        },
+        {
+          path:"/detail/:id",
+          Component:DoctorDetail
         }
 
       ]

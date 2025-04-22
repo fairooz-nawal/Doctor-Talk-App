@@ -3,13 +3,13 @@ import { NavLink } from 'react-router';
 import logo from '../../../C001-assets/logo.png';
 const Navbar = () => {
     const link = <>
-     <NavLink to="/home" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>Home</NavLink>
+     <NavLink to="/" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>Home</NavLink>
      <NavLink to="/myBooking" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>My Bookings</NavLink>
      <NavLink to="/blogs" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>Blogs</NavLink>
      <NavLink to="/contactUs" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>Contact Us</NavLink>
     </>
     return (
-        <div className="navbar bg-base-200 shadow-sm lg:px-[200px]">
+        <div className="navbar bg-gray-200 shadow-sm lg:px-[200px]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

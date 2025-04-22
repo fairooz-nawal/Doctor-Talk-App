@@ -1,13 +1,18 @@
-import React, { useContext, useState } from 'react';
+import React, { Suspense, useContext, useState } from 'react';
 import { ApiProvider } from '../contextAPI/ContextApi';
 import Doctor from './Doctor';
-
 const DoctorList = () => {
-    const { doctor } = useContext(ApiProvider);
+    const { doctor, loading } = useContext(ApiProvider);
     const [visit, setvisit] = useState(false);
-
     const handleVisited = () => {
         setvisit(!visit);
+    }
+    if (loading) {
+        return (
+            <div className="max-w-[100px] mx-auto py-[80px]">
+                <span className="loading loading-bars loading-xl"></span>
+            </div>
+        );
     }
     return (
         <div className="max-w-7xl mx-auto py-[80px] space-y-8">
@@ -24,7 +29,6 @@ const DoctorList = () => {
             <div className=" flex justify-center w-3/4 mx-auto">
                 <button onClick={handleVisited} className='btn bg-blue-700 white p-5 rounded-full text-white'>View All Doctors</button>
             </div>
-
         </div>
 
     );
