@@ -12,7 +12,7 @@ const Footer = () => {
         <NavLink to="/contactUs" className={({ isActive }) => isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium' : 'p-2 rounded-2xl font-medium'}><a>Contact Us</a></NavLink>
     </>
     return (
-        <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded py-10">
+        <footer className="footer footer-horizontal footer-center bg-white text-base-content rounded py-10">
             <div className="flex">
             <img src={logo} className='w-10 h-10 rounded-full' alt="" />
                 <a className="btn btn-ghost text-3xl"> Doc Talk</a>

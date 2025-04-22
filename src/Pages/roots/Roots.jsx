@@ -5,7 +5,7 @@ import { Outlet } from 'react-router';
 
 const Roots = () => {
     return (
-        <div className='jakarta bg-gray-200 '>
+        <div className='jakarta bg-gray-300 '>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
