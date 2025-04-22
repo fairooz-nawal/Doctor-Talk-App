@@ -8,6 +8,7 @@ import MyBookings from '../Pages/myBookings/MyBookings';
 import Blogs from '../Pages/Blogs/Blogs';
 import Contact from '../Pages/Contact/Contact';
 import Home from '../Pages/home/Home';
+import Error from '../Pages/Error/Error';
 const router = createBrowserRouter([
     {
       path: "/",
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
 
       ]
     },
+    {
+      path:"*",
+      Component:Error
+    }
   ]);
 
   export default router;
