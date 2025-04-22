@@ -3,17 +3,17 @@ import { NavLink } from 'react-router';
 import logo from '../../../C001-assets/logo.png';
 const Navbar = () => {
     const link = <>
-     <NavLink to="/" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}><a>Home</a></NavLink>
-     <NavLink to="/myBooking" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}><a>My Bookings</a></NavLink>
-     <NavLink to="/blogs" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}><a>Blogs</a></NavLink>
-     <NavLink to="/contactUs" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}><a>Contact Us</a></NavLink>
+     <NavLink to="/home" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>Home</NavLink>
+     <NavLink to="/myBooking" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>My Bookings</NavLink>
+     <NavLink to="/blogs" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>Blogs</NavLink>
+     <NavLink to="/contactUs" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>Contact Us</NavLink>
     </>
     return (
         <div className="navbar bg-gray-200 shadow-sm lg:px-[200px]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeNavLinknecap="round" strokeNavLinknejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path  strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                     </div>
                     <ul
                         tabIndex={0}

@@ -1,0 +1,314 @@
+[
+    {
+        "id": 1,
+        "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80",
+        "name": "Dr. Sarah Johnson",
+        "education": "MD, Harvard Medical School",
+        "speciality": "Cardiology",
+        "experience": "15 years",
+        "registration_number": "CARD-78945",
+        "designation": "Senior Cardiologist",
+        "workplace": "Massachusetts General Hospital",
+        "fee": "$250",
+        "availability": [
+            {
+                "day": "Monday",
+                "time": "9:00 AM - 5:00 PM"
+            },
+            {
+                "day": "Wednesday",
+                "time": "10:00 AM - 6:00 PM"
+            },
+            {
+                "day": "Friday",
+                "time": "8:00 AM - 4:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80",
+        "name": "Dr. Michael Chen",
+        "education": "PhD Neurology, Johns Hopkins University",
+        "speciality": "Neurology",
+        "experience": "12 years",
+        "registration_number": "NEURO-45612",
+        "designation": "Head of Neurology",
+        "workplace": "Johns Hopkins Hospital",
+        "fee": "$300",
+        "availability": [
+            {
+                "day": "Tuesday",
+                "time": "8:00 AM - 3:00 PM"
+            },
+            {
+                "day": "Thursday",
+                "time": "9:00 AM - 5:00 PM"
+            },
+            {
+                "day": "Saturday",
+                "time": "10:00 AM - 2:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80",
+        "name": "Dr. Emily Rodriguez",
+        "education": "MD Pediatrics, Stanford University",
+        "speciality": "Pediatrics",
+        "experience": "8 years",
+        "registration_number": "PED-12378",
+        "designation": "Pediatric Specialist",
+        "workplace": "Stanford Children's Health",
+        "fee": "$180",
+        "availability": [
+            {
+                "day": "Monday",
+                "time": "8:00 AM - 4:00 PM"
+            },
+            {
+                "day": "Wednesday",
+                "time": "8:00 AM - 4:00 PM"
+            },
+            {
+                "day": "Friday",
+                "time": "8:00 AM - 4:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "image": "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80",
+        "name": "Dr. James Wilson",
+        "education": "MD Orthopedics, Mayo Clinic",
+        "speciality": "Orthopedic Surgery",
+        "experience": "18 years",
+        "registration_number": "ORTHO-96325",
+        "designation": "Orthopedic Surgeon",
+        "workplace": "Mayo Clinic",
+        "fee": "$350",
+        "availability": [
+            {
+                "day": "Tuesday",
+                "time": "7:00 AM - 12:00 PM"
+            },
+            {
+                "day": "Thursday",
+                "time": "7:00 AM - 12:00 PM"
+            },
+            {
+                "day": "Saturday",
+                "time": "8:00 AM - 1:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80",
+        "name": "Dr. Olivia Parker",
+        "education": "MD Dermatology, Yale School of Medicine",
+        "speciality": "Dermatology",
+        "experience": "10 years",
+        "registration_number": "DERM-74125",
+        "designation": "Dermatology Consultant",
+        "workplace": "Yale New Haven Hospital",
+        "fee": "$220",
+        "availability": [
+            {
+                "day": "Monday",
+                "time": "10:00 AM - 6:00 PM"
+            },
+            {
+                "day": "Wednesday",
+                "time": "9:00 AM - 5:00 PM"
+            },
+            {
+                "day": "Friday",
+                "time": "10:00 AM - 4:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "image": "https://images.unsplash.com/photo-1551601651-bc60f254d532?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500&q=80",
+        "name": "Dr. Robert Kim",
+        "education": "MD Ophthalmology, UCLA",
+        "speciality": "Ophthalmology",
+        "experience": "14 years",
+        "registration_number": "OPHTH-85236",
+        "designation": "Eye Specialist",
+        "workplace": "UCLA Medical Center",
+        "fee": "$275",
+        "availability": [
+            {
+                "day": "Tuesday",
+                "time": "8:30 AM - 4:30 PM"
+            },
+            {
+                "day": "Thursday",
+                "time": "8:30 AM - 4:30 PM"
+            },
+            {
+                "day": "Saturday",
+                "time": "9:00 AM - 2:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "image": "https://plus.unsplash.com/premium_photo-1661687274276-365b4c33a91b?q=80&w=2016&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "name": "Dr. Jennifer Lee",
+        "education": "MD Psychiatry, Columbia University",
+        "speciality": "Psychiatry",
+        "experience": "9 years",
+        "registration_number": "PSY-36985",
+        "designation": "Psychiatrist",
+        "workplace": "NewYork-Presbyterian Hospital",
+        "fee": "$320",
+        "availability": [
+            {
+                "day": "Monday",
+                "time": "9:00 AM - 5:00 PM"
+            },
+            {
+                "day": "Wednesday",
+                "time": "9:00 AM - 5:00 PM"
+            },
+            {
+                "day": "Friday",
+                "time": "9:00 AM - 3:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "image": "https://images.unsplash.com/photo-1612363584451-cd060fb62018?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c3BsYXNoJTIwZG9jdG9yJTIwcHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D",
+        "name": "Dr. David Miller",
+        "education": "MD Gastroenterology, Cleveland Clinic",
+        "speciality": "Gastroenterology",
+        "experience": "16 years",
+        "registration_number": "GASTRO-14785",
+        "designation": "Gastroenterologist",
+        "workplace": "Cleveland Clinic",
+        "fee": "$290",
+        "availability": [
+            {
+                "day": "Tuesday",
+                "time": "7:30 AM - 2:30 PM"
+            },
+            {
+                "day": "Thursday",
+                "time": "7:30 AM - 2:30 PM"
+            },
+            {
+                "day": "Saturday",
+                "time": "8:00 AM - 12:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "image": "https://media.istockphoto.com/id/172314964/photo/doctor.webp?a=1&b=1&s=612x612&w=0&k=20&c=UXM2-ngabS9KEUfkXitodJe9T0gzIiD32sRK5XAi9cg=",
+        "name": "Dr. Elizabeth Taylor",
+        "education": "MD Obstetrics, University of Pennsylvania",
+        "speciality": "Obstetrics & Gynecology",
+        "experience": "11 years",
+        "registration_number": "OBGYN-25896",
+        "designation": "OB-GYN Specialist",
+        "workplace": "Hospital of the University of Pennsylvania",
+        "fee": "$240",
+        "availability": [
+            {
+                "day": "Monday",
+                "time": "8:00 AM - 4:00 PM"
+            },
+            {
+                "day": "Wednesday",
+                "time": "8:00 AM - 4:00 PM"
+            },
+            {
+                "day": "Friday",
+                "time": "8:00 AM - 12:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "image": "https://media.istockphoto.com/id/1278337230/photo/arabic-doctor-walking-and-putting-medical-cap-on-on-gradient-bac.webp?a=1&b=1&s=612x612&w=0&k=20&c=A8cVn-M5QkrYWMy9G__d2NK2mY6BTI-QezNsoF21ne0=",
+        "name": "Dr. William Brown",
+        "education": "MD Urology, Northwestern University",
+        "speciality": "Urology",
+        "experience": "13 years",
+        "registration_number": "URO-65478",
+        "designation": "Urological Surgeon",
+        "workplace": "Northwestern Memorial Hospital",
+        "fee": "$310",
+        "availability": [
+            {
+                "day": "Tuesday",
+                "time": "9:00 AM - 5:00 PM"
+            },
+            {
+                "day": "Thursday",
+                "time": "9:00 AM - 5:00 PM"
+            },
+            {
+                "day": "Saturday",
+                "time": "9:00 AM - 1:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "image": "https://media.istockphoto.com/id/502890539/photo/doctor-radiologist-looking-at-x-ray-medical.webp?a=1&b=1&s=612x612&w=0&k=20&c=me4TmoP2l3f7u06C2H43PTXfeb5RXENyXVVdpXKKbxM=",
+        "name": "Dr. Sophia Martinez",
+        "education": "MD Endocrinology, Duke University",
+        "speciality": "Endocrinology",
+        "experience": "7 years",
+        "registration_number": "ENDO-32145",
+        "designation": "Endocrinologist",
+        "workplace": "Duke University Hospital",
+        "fee": "$260",
+        "availability": [
+            {
+                "day": "Monday",
+                "time": "10:00 AM - 6:00 PM"
+            },
+            {
+                "day": "Wednesday",
+                "time": "10:00 AM - 6:00 PM"
+            },
+            {
+                "day": "Friday",
+                "time": "9:00 AM - 3:00 PM"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "image": "https://plus.unsplash.com/premium_photo-1661746221193-41ac87823422?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fHNwbGFzaCUyMGRvY3RvciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D",
+        "name": "Dr. Daniel Kim",
+        "education": "MD Oncology, MD Anderson Cancer Center",
+        "speciality": "Oncology",
+        "experience": "17 years",
+        "registration_number": "ONCO-98741",
+        "designation": "Oncologist",
+        "workplace": "MD Anderson Cancer Center",
+        "fee": "$380",
+        "availability": [
+            {
+                "day": "Tuesday",
+                "time": "8:00 AM - 3:00 PM"
+            },
+            {
+                "day": "Thursday",
+                "time": "8:00 AM - 3:00 PM"
+            },
+            {
+                "day": "Saturday",
+                "time": "9:00 AM - 1:00 PM"
+            }
+        ]
+    }
+]

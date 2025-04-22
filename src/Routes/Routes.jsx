@@ -20,6 +20,10 @@ const router = createBrowserRouter([
           Component:Home
         },
         {
+          path:"/home",
+          Component:Home
+        },
+        {
           path:"/myBooking",
           Component:MyBookings
         },
