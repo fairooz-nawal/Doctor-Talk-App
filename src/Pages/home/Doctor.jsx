@@ -9,7 +9,7 @@ const Doctor = ({ singleDoc }) => {
                 <img
                     src={image}
                     alt="Shoes"
-                    className="rounded-xl h-[300px]" />
+                    className="rounded-xl h-[200px] lg:h-[300px]" />
             </figure><br />
             <div className="flex ml-5 gap-3">
                 <button className="btn border-2 border-green-400 bg-green-100 p-3 text-green-400 rounded-full">Available</button>

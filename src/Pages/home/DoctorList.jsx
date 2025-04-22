@@ -22,7 +22,7 @@ const DoctorList = () => {
                 }
             </div>
             <div className=" flex justify-center w-3/4 mx-auto">
-                <button onClick={handleVisited} className='btn bg-blue-700 white p-5 rounded-full text-white text-xl'>View All Doctors</button>
+                <button onClick={handleVisited} className='btn bg-blue-700 white p-5 rounded-full text-white'>View All Doctors</button>
             </div>
 
         </div>
