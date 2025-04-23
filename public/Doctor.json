@@ -9,7 +9,7 @@
         "registration_number": "CARD-78945",
         "designation": "Senior Cardiologist",
         "workplace": "Massachusetts General Hospital",
-        "fee": "$250",
+        "fee": "250",
         "availability": [
             {
                 "day": "Monday",
@@ -35,7 +35,7 @@
         "registration_number": "NEURO-45612",
         "designation": "Head of Neurology",
         "workplace": "Johns Hopkins Hospital",
-        "fee": "$300",
+        "fee": "300",
         "availability": [
             {
                 "day": "Tuesday",
@@ -61,7 +61,7 @@
         "registration_number": "PED-12378",
         "designation": "Pediatric Specialist",
         "workplace": "Stanford Children's Health",
-        "fee": "$180",
+        "fee": "180",
         "availability": [
             {
                 "day": "Monday",
@@ -87,7 +87,7 @@
         "registration_number": "ORTHO-96325",
         "designation": "Orthopedic Surgeon",
         "workplace": "Mayo Clinic",
-        "fee": "$350",
+        "fee": "350",
         "availability": [
             {
                 "day": "Tuesday",
@@ -113,7 +113,7 @@
         "registration_number": "DERM-74125",
         "designation": "Dermatology Consultant",
         "workplace": "Yale New Haven Hospital",
-        "fee": "$220",
+        "fee": "220",
         "availability": [
             {
                 "day": "Monday",
@@ -139,7 +139,7 @@
         "registration_number": "OPHTH-85236",
         "designation": "Eye Specialist",
         "workplace": "UCLA Medical Center",
-        "fee": "$275",
+        "fee": "275",
         "availability": [
             {
                 "day": "Tuesday",
@@ -165,7 +165,7 @@
         "registration_number": "PSY-36985",
         "designation": "Psychiatrist",
         "workplace": "NewYork-Presbyterian Hospital",
-        "fee": "$320",
+        "fee": "320",
         "availability": [
             {
                 "day": "Monday",
@@ -191,7 +191,7 @@
         "registration_number": "GASTRO-14785",
         "designation": "Gastroenterologist",
         "workplace": "Cleveland Clinic",
-        "fee": "$290",
+        "fee": "290",
         "availability": [
             {
                 "day": "Tuesday",
@@ -217,7 +217,7 @@
         "registration_number": "OBGYN-25896",
         "designation": "OB-GYN Specialist",
         "workplace": "Hospital of the University of Pennsylvania",
-        "fee": "$240",
+        "fee": "240",
         "availability": [
             {
                 "day": "Monday",
@@ -243,7 +243,7 @@
         "registration_number": "URO-65478",
         "designation": "Urological Surgeon",
         "workplace": "Northwestern Memorial Hospital",
-        "fee": "$310",
+        "fee": "310",
         "availability": [
             {
                 "day": "Tuesday",
@@ -269,7 +269,7 @@
         "registration_number": "ENDO-32145",
         "designation": "Endocrinologist",
         "workplace": "Duke University Hospital",
-        "fee": "$260",
+        "fee": "260",
         "availability": [
             {
                 "day": "Monday",
@@ -295,7 +295,7 @@
         "registration_number": "ONCO-98741",
         "designation": "Oncologist",
         "workplace": "MD Anderson Cancer Center",
-        "fee": "$380",
+        "fee": "380",
         "availability": [
             {
                 "day": "Tuesday",

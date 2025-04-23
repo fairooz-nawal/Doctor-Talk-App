@@ -3,56 +3,67 @@ import { toast } from 'react-toastify';
 
 export const ApiProvider = createContext('');
 
-const ContextApi = ({children}) => {
+const ContextApi = ({ children }) => {
     const [doctor, setDoctor] = useState([]);
-    const [loading,setloading] = useState(true);
+    const [loading, setloading] = useState(true);
     const [booking, setBooking] = useState([]);
+    const [error,setError] =useState([]);
 
-    useEffect( ()=>{
-        fetch('./Doctor.json')
-        .then(res => res.json())
-        .then(data => {
-            setDoctor(data)
-            setloading(false)
-        })
-    },[])
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('./Doctor.json');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                setDoctor(data);
+                setloading(false);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                // You can also set an error state here
+                setError(error.message);
+            }
+        };
+        fetchData();
+    }, []);
 
-    const handleSetBooking = (id,name)=>{
-            const newBooking = [...booking,id];
-            setBooking(newBooking);
-            toast.success(`Your booking for ${name} is Confirmed`, {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: false,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-                });
-            addItemToCartLocalStorage(id);
+    const handleSetBooking = (id, name) => {
+        const newBooking = [...booking, id];
+        setBooking(newBooking);
+        toast.success(`Your booking for ${name} is Confirmed`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+        addItemToCartLocalStorage(id);
     }
 
-    const getCartFromLocalStorage = ()=>{
+    const getCartFromLocalStorage = () => {
         const storedBookingString = localStorage.getItem('booking');
-        if(storedBookingString){
+        if (storedBookingString) {
             const storedCard = JSON.parse(storedBookingString);
             return storedCard;
+        }
+        return [];
     }
-    return [];
-}
 
-    const saveCartToLocalStorage = (booking)=>{
+    const saveCartToLocalStorage = (booking) => {
         const bookString = JSON.stringify(booking);
-        localStorage.setItem('booking',bookString);
+        localStorage.setItem('booking', bookString);
     }
-    const addItemToCartLocalStorage = (id)=>{
+    const addItemToCartLocalStorage = (id) => {
         const booking = getCartFromLocalStorage();
         booking.push(id);
         saveCartToLocalStorage(booking);
     }
 
-    const handleDeleteBooking = (id)=>{
+    const handleDeleteBooking = (id) => {
         const booking = getCartFromLocalStorage();
         const remaining = booking.filter(single => single !== id);
         saveCartToLocalStorage(remaining);
@@ -66,14 +77,14 @@ const ContextApi = ({children}) => {
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
+        });
     }
 
     return (
         <div>
-           <ApiProvider.Provider value = {{doctor,loading,getCartFromLocalStorage,handleDeleteBooking,handleSetBooking}}>
-            {children}
-           </ApiProvider.Provider>
+            <ApiProvider.Provider value={{ doctor, loading, getCartFromLocalStorage, handleDeleteBooking, handleSetBooking,error }}>
+                {children}
+            </ApiProvider.Provider>
         </div>
     );
 };

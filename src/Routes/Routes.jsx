@@ -4,7 +4,6 @@ import {
   } from "react-router";
 import Roots from '../Pages/roots/Roots';
 import MyBookings from '../Pages/myBookings/MyBookings';
-import Contact from '../Pages/Contact/Contact';
 import Home from '../Pages/home/Home';
 import Error from '../Pages/Error/Error';
 import DoctorDetail from '../Pages/home/DoctorDetail';
@@ -30,14 +29,13 @@ const router = createBrowserRouter([
           Component:BlogsContainer
         },
         {
-          path:"/contactUs",
-          Component:Contact
-        },
-        {
           path:"/detail/:id",
           Component:DoctorDetail
-        }
-
+        },
+        // {
+        //   path:"/detail/:id(13|14|15|...)",
+        //   Component:Error
+        // },
       ]
     },
     {

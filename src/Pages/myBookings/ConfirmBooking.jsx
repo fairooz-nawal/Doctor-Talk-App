@@ -13,7 +13,7 @@ const ConfirmBooking = ({booking}) => {
                         <p className="text-gray-500">{education}</p>
                         <p className="text-gray-500">{speciality}</p>
                     </div>
-                    <p className="text-gray-500">Appointment Fee: {fee} + VAT</p>
+                    <p className="text-gray-500">Appointment Fee: ${fee} + VAT</p>
                 </div>
                 <hr className='border-1 border-dashed border-gray-300' />
                 <button onClick={()=>handleDeleteBooking(booking.id)} className='w-full border-2 border-red-500 text-red-500 rounded-3xl py-3 font-bold'>Cancel Appointment</button>

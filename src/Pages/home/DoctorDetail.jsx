@@ -4,8 +4,9 @@ import { FaRegRegistered } from "react-icons/fa6";
 import { ApiProvider } from '../contextAPI/ContextApi';
 import { toast } from 'react-toastify';
 
+
 const DoctorDetail = () => {
-    const { loading, doctor, handleSetBooking, getCartFromLocalStorage } = useContext(ApiProvider)
+    const { loading, doctor, handleSetBooking, getCartFromLocalStorage,error } = useContext(ApiProvider)
     const { id } = useParams();
     const intId = parseInt(id);
     const single = doctor.find(singleDoc => singleDoc.id == intId)
@@ -30,7 +31,6 @@ const DoctorDetail = () => {
             });
         }
     }
-
     if (loading) {
         return (
             <div className="max-w-[100px] mx-auto py-[80px]">
@@ -38,11 +38,10 @@ const DoctorDetail = () => {
             </div>
         );
     }
-
-
+   
     return (
         <div className="max-w-full lg:max-w-7xl mx-auto px-5 lg:px-[100px] pb-[80px]">
-
+            {error}
             <div className="w-full mx-auto text-center bg-white p-[50px] my-10 rounded-2xl">
                 <h1 className="text-3xl font-bold">Doctor’s Profile Details</h1>
                 <p className="py-6 text-gray-500">
@@ -74,7 +73,7 @@ const DoctorDetail = () => {
                                 single.availability.map((avail, index) => <button key={index} className='border-2 border-yellow-300 bg-yellow-50 text-yellow-300 p-2 rounded-full'>{avail.day}</button>)
                             }
                         </div><br />
-                        <p className='text-blue-500'><span className='font-bold text-black'>Consulation Fee :</span> <span className='font-bold text-blue-600'>{single.fee}</span> <span className='text-gray-500'>(inclu VAT)</span> Per Consultation</p>
+                        <p className='text-blue-500'><span className='font-bold text-black'>Consulation Fee :</span> <span className='font-bold text-blue-600'>${single.fee}</span> <span className='text-gray-500'>(inclu VAT)</span> Per Consultation</p>
                     </div>
                 </div>
             </div>
