@@ -25,8 +25,8 @@ const Doctor = ({ singleDoc }) => {
                     <p className='text-gray-500'>Registration No: {registration_number}</p>
                 </div>
                 
-                <div className="card-actions">
-                    <Link to={`detail/${id}`}><button className="btn border-blue-700 text-blue-500 bg-white rounded-3xl w-full">View Details</button></Link>
+                <div className="">
+                    <Link to={`detail/${id}`}><button className="btn border-blue-700 text-blue-500 bg-white rounded-3xl w-full hover:bg-blue-700 hover:text-white">View Details</button></Link>
                 </div>
                 
             </div>

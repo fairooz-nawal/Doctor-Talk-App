@@ -19,28 +19,31 @@ const ConfirmContainer = ({ bookedDoctor }) => {
         const { fill, x, y, width, height } = props;
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
     };
+   
     return (
         <div className='max-w-full lg:max-w-5xl mx-auto space-y-4 text-center py-[100px]'>
-            <BarChart
-                width={1000}
-                height={300}
-                data={chartData}
-                margin={{
-                    top: 20,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                }}
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-                    {chartData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-                    ))}
-                </Bar>
-            </BarChart>
+            <div className="flex justify-center">
+                <BarChart
+                    width={1000}
+                    height={400}
+                    data={chartData}
+                    margin={{
+                        top: 20,
+                        right: 30,
+                        left: 20,
+                        bottom: 5,
+                    }}
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+                        {chartData.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+                        ))}
+                    </Bar>
+                </BarChart>
+            </div>
             <div className="text-center">
                 <h1 className="text-3xl lg:text-5xl font-bold">My Today Appointments</h1>
                 <p className="py-6">
