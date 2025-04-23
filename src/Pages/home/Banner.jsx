@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div className="hero max-w-full lg:max-w-9xl min-h-screen">
             <div className="hero-content text-center">
-                <div className=" space-y-4 bg-gradient-to-b from-base-200 to-white p-5 lg:px-[160px] lg:py-[64px] border-4 border-white rounded-4xl">
+                <div className=" space-y-4 bg-gradient-to-b from-base-900 to-white p-5 lg:px-[160px] lg:py-[64px] border-4 border-white rounded-4xl">
                     <h1 className="text-3xl lg:text-5xl font-bold">Dependable Care, Backed by Trusted Professionals.</h1>
                     <p className="py-6">
                         Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.

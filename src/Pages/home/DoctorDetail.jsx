@@ -12,9 +12,9 @@ const DoctorDetail = () => {
 
     const currentBooking = getCartFromLocalStorage();
     const navigate = useNavigate();
-    const handleNavigate = (id) => {
+    const handleNavigate = (id,name) => {
         if (!currentBooking.includes(id)) {
-            handleSetBooking(single.id)
+            handleSetBooking(single.id,name)
             navigate('/myBooking');
         } 
         else {
@@ -58,7 +58,8 @@ const DoctorDetail = () => {
                     <div className=''>
                         <h1 className="text-3xl font-bold">{single.name}</h1>
                         <p className="text-gray-500">{single.education}</p>
-                        <p className="text-gray-500">{single.speciality}</p><br />
+                        <p className="text-gray-500">{single.speciality}</p>
+                        <p className="font-bold">Designation:{single.designation}</p><br />
                         <p className="text-gray-500">Working at</p>
                         <h1 className="text-xl font-bold">{single.workplace}</h1><br />
                         <hr className='border-1 border-dashed border-gray-300' />
@@ -89,7 +90,7 @@ const DoctorDetail = () => {
                 <button className="p-2 text-yellow-500 bg-yellow-100  rounded-2xl">
                     Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
                 </button>
-                <button onClick={() => handleNavigate(single.id)} className="w-full my-2 p-2 text-white bg-blue-700  rounded-2xl">
+                <button onClick={() => handleNavigate(single.id,single.name)} className="w-full my-2 p-2 text-white bg-blue-700  rounded-2xl">
                     Book Appointment Now
                 </button>
             </div>

@@ -17,10 +17,10 @@ const ContextApi = ({children}) => {
         })
     },[])
 
-    const handleSetBooking = (id)=>{
+    const handleSetBooking = (id,name)=>{
             const newBooking = [...booking,id];
             setBooking(newBooking);
-            toast.success('Your booking is Confirmed', {
+            toast.success(`Your booking for ${name} is Confirmed`, {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,

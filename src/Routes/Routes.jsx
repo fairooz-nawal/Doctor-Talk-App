@@ -4,11 +4,11 @@ import {
   } from "react-router";
 import Roots from '../Pages/roots/Roots';
 import MyBookings from '../Pages/myBookings/MyBookings';
-import Blogs from '../Pages/Blogs/Blogs';
 import Contact from '../Pages/Contact/Contact';
 import Home from '../Pages/home/Home';
 import Error from '../Pages/Error/Error';
 import DoctorDetail from '../Pages/home/DoctorDetail';
+import BlogsContainer from "../Pages/Blogs/BlogsContainer";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -26,7 +26,8 @@ const router = createBrowserRouter([
         },
         {
           path:"/blogs",
-          Component:Blogs
+          loader: ()=>fetch('./Question.json'),
+          Component:BlogsContainer
         },
         {
           path:"/contactUs",

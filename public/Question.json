@@ -1,0 +1,30 @@
+
+   [
+      {
+        "id": 1,
+        "question": "What is useState and how does it work in React?",
+        "answer": "useState is a Hook in React that allows you to add state to functional components. It returns an array with two elements: the current state value and a function that lets you update it. When you call the update function, React re-renders the component with the new state."
+      },
+      {
+        "id": 2,
+        "question": "What is the purpose of useEffect in React?",
+        "answer": "useEffect is a Hook that lets you perform side effects in function components. It is used for operations like data fetching, subscriptions, or manually changing the DOM. You can control when the effect runs by specifying dependencies in its dependency array."
+      },
+      {
+        "id": 3,
+        "question": "What is a custom hook in React and when should you use one?",
+        "answer": "A custom hook is a JavaScript function that starts with 'use' and allows you to extract and reuse stateful logic across multiple components. Use custom hooks when you find yourself repeating the same logic in different components to keep code DRY and maintainable."
+      },
+      {
+        "id": 4,
+        "question": "Difference between controlled and uncontrolled components? Which one is better?",
+        "answer": "Controlled components have their form data managed by the React state, while uncontrolled components store data in the DOM using refs. Controlled components provide better control and validation, making them preferable in most cases, though uncontrolled components can be useful for quick forms or when integrating with non-React libraries."
+      },
+      {
+        "id": 5,
+        "question": "Tell us something about useFormStatus() (explore and explain)",
+        "answer": "useFormStatus is a hook in React (introduced in React 18.2 with the new form actions API) that gives you access to the status of a form submission. It is mainly used with server actions in frameworks like Next.js. It returns an object that includes states like 'pending', 'success', and 'error', allowing you to show UI feedback (e.g., loading spinners or messages) during and after form submission."
+      }
+    ]
+  
+  
