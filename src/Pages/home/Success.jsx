@@ -25,12 +25,12 @@ const Success = () => {
               <div className=" bg-white space-y-4 rounded-2xl p-5 py-8">
                 <img src={successReview} alt="" />
                 <h1 className='text-2xl font-bold lg:text-5xl'><CountUp end={1900} duration={6.75}/>+</h1>
-                <p className='text-gray-500'>Paitents</p>
+                <p className='text-gray-500'>Total Paitents</p>
               </div>
               <div className=" bg-white space-y-4 rounded-2xl p-5 py-8">
                 <img src={successstaff} alt="" />
                 <h1 className='text-2xl font-bold lg:text-5xl'><CountUp end={300} duration={6.75}/>+</h1>
-                <p className='text-gray-500'>Staffs</p>
+                <p className='text-gray-500'>Total Staffs</p>
               </div>
             </div>
         </div>

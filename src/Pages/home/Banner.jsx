@@ -1,5 +1,6 @@
 import React from 'react';
 import bg from '../../../C001-assets/banner-img-1.png'
+import team from '../../../C001-assets/team doc.jpg'
 const Banner = () => {
     return (
         <div className="hero max-w-full lg:max-w-9xl min-h-screen">
@@ -14,8 +15,8 @@ const Banner = () => {
                         <button className="btn bg-blue-700 text-white p-7 rounded-full">Search Now</button>
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
-                        <img src={bg} alt="" className='w-full'/>
-                        <img src={bg} alt="" className='w-full'/>
+                        <img src={bg} alt="" className='w-full h-[150px] lg:h-[300px] rounded-xl'/>
+                        <img src={team} alt="" className='w-full h-[150px] lg:h-[300px] rounded-xl'/>
                     </div>
                 </div>
             </div>

@@ -22,7 +22,7 @@ const Doctor = ({ singleDoc }) => {
                 <hr className='border-1 border-dashed border-gray-300' />
                 <div className="flex gap-2 items-center">
                     <BiRegistered className='text-2xl text-gray-400'/>
-                    <p className='text-gray-500'> {registration_number}</p>
+                    <p className='text-gray-500'>Registration No: {registration_number}</p>
                 </div>
                 
                 <div className="card-actions">

@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import {  useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { FaRegRegistered } from "react-icons/fa6";
 import { ApiProvider } from '../contextAPI/ContextApi';
+import { ToastContainer, toast } from 'react-toastify';
 const DoctorDetail = () => {
-    const { loading,doctor } = useContext(ApiProvider)
+    const { loading, doctor, handleSetBooking } = useContext(ApiProvider)
     const { id } = useParams();
     const intId = parseInt(id);
     const single = doctor.find(singleDoc => singleDoc.id == intId)
-    console.log(doctor);
     if (loading) {
         return (
             <div className="max-w-[100px] mx-auto py-[80px]">
@@ -17,6 +17,18 @@ const DoctorDetail = () => {
     }
     return (
         <div className="max-w-full lg:max-w-7xl mx-auto px-5 lg:px-[100px] pb-[80px]">
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
             <div className="w-full mx-auto text-center bg-white p-[50px] my-10 rounded-2xl">
                 <h1 className="text-3xl font-bold">Doctor’s Profile Details</h1>
                 <p className="py-6 text-gray-500">
@@ -44,7 +56,7 @@ const DoctorDetail = () => {
                         <div className='grid grid-cols-1 lg:grid-cols-4 gap-3 items-center'>
                             <p className='font-bold' >Availability</p>
                             {
-                                single.availability.map((avail) => <button className='border-2 border-yellow-300 bg-yellow-50 text-yellow-300 p-2 rounded-full'>{avail.day}</button>)
+                                single.availability.map((avail,index) => <button key={index} className='border-2 border-yellow-300 bg-yellow-50 text-yellow-300 p-2 rounded-full'>{avail.day}</button>)
                             }
                         </div><br />
                         <p className='text-blue-500'><span className='font-bold text-black'>Consulation Fee :</span> <span className='font-bold text-blue-600'>{single.fee}</span> <span className='text-gray-500'>(inclu VAT)</span> Per Consultation</p>
@@ -56,15 +68,15 @@ const DoctorDetail = () => {
                 <h1 className="text-3xl font-bold">Book an Appointment</h1><br />
                 <hr className='border-1 border-dashed border-gray-300' /><br />
                 <div className="flex justify-between items-center">
-                <p className='font-bold' >Availability</p> 
-                <button className='font-bold p-1 rounded-xl text-green-500 bg-green-100 border-2 border-green-500' >Doctor Available Today</button> 
+                    <p className='font-bold' >Availability</p>
+                    <button className='font-bold p-1 rounded-xl text-green-500 bg-green-100 border-2 border-green-500' >Doctor Available Today</button>
                 </div><br />
                 <hr className='border-1 border-dashed border-gray-300' /><br />
                 <button className="p-2 text-yellow-500 bg-yellow-100  rounded-2xl">
-                Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
+                    Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
                 </button>
-                <button className="w-full my-2 p-2 text-white bg-blue-700  rounded-2xl">
-                Book Appointment Now
+                <button onClick={() => handleSetBooking(single.id)} className="w-full my-2 p-2 text-white bg-blue-700  rounded-2xl">
+                    Book Appointment Now
                 </button>
             </div>
         </div>
