@@ -21,11 +21,40 @@ const ContextApi = ({children}) => {
         const newBooking = [...booking,id];
         setBooking(newBooking);
         toast("Your Booking is Confirmed");
+        addItemToCartLocalStorage(id);
+    }
+
+    const getCartFromLocalStorage = ()=>{
+        const storedBookingString = localStorage.getItem('booking');
+        if(storedBookingString){
+            const storedCard = JSON.parse(storedBookingString);
+            return storedCard;
+    }
+    return [];
+}
+
+    const saveCartToLocalStorage = (booking)=>{
+        const bookString = JSON.stringify(booking);
+        localStorage.setItem('booking',bookString);
+    }
+    const addItemToCartLocalStorage = (id)=>{
+        const booking = getCartFromLocalStorage();
+        booking.push(id);
+        toast("Your Booking is Confirmed");
+        saveCartToLocalStorage(booking);
+    }
+
+    const handleDeleteBooking = (id)=>{
+        const booking = getCartFromLocalStorage();
+        const remaining = booking.filter(single => single !== id);
+        saveCartToLocalStorage(remaining);
+        setBooking(remaining);
+        toast("Your Booking is Cancelled");
     }
 
     return (
         <div>
-           <ApiProvider.Provider value = {{doctor,loading,handleSetBooking,booking}}>
+           <ApiProvider.Provider value = {{doctor,loading,getCartFromLocalStorage,handleDeleteBooking,handleSetBooking}}>
             {children}
            </ApiProvider.Provider>
         </div>

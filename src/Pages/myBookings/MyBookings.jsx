@@ -5,9 +5,9 @@ import EmptyBooking from './EmptyBooking';
 import ConfirmContainer from './ConfirmContainer';
 
 const MyBookings = () => {
-    const {doctor, booking } = useContext(ApiProvider);
+    const {doctor, getCartFromLocalStorage } = useContext(ApiProvider);
+    const booking = getCartFromLocalStorage();
     const bookedDoctor = doctor.filter(single => booking.includes(single.id));
-    console.log("this is booking",booking);
     return (
        <div className="">
         {

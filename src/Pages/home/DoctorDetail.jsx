@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router';
 import { FaRegRegistered } from "react-icons/fa6";
 import { ApiProvider } from '../contextAPI/ContextApi';
 const DoctorDetail = () => {
-    const { loading, doctor, handleSetBooking, } = useContext(ApiProvider)
+    const { loading, doctor, handleSetBooking } = useContext(ApiProvider)
     const { id } = useParams();
     const intId = parseInt(id);
     const single = doctor.find(singleDoc => singleDoc.id == intId)
