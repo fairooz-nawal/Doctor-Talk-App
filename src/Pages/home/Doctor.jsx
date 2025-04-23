@@ -11,7 +11,7 @@ const Doctor = ({ singleDoc }) => {
                     alt="Shoes"
                     className="rounded-xl h-[200px] lg:h-[300px]" />
             </figure><br />
-            <div className="flex ml-5 gap-3">
+            <div className="grid grid-cols-1 lg:grid-cols-2 ml-5 gap-3">
                 <button className="btn border-2 border-green-400 bg-green-100 p-3 text-green-400 rounded-full">Available</button>
                 <button className="btn border-2 border-blue-400 bg-blue-100 p-3 text-blue-400 rounded-full">{experience}+ Experience</button>
             </div>

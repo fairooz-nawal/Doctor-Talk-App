@@ -21,7 +21,7 @@ const ConfirmContainer = ({ bookedDoctor }) => {
     };
    
     return (
-        <div className='max-w-full lg:max-w-5xl mx-auto space-y-4 text-center py-[100px]'>
+        <div className='max-w-full lg:max-w-5xl mx-auto space-y-4 text-center py-[100px] px-5'>
             <div className="flex justify-center">
                 <BarChart
                     width={1000}
