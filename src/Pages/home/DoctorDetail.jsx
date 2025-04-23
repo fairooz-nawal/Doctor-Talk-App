@@ -1,13 +1,18 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { FaRegRegistered } from "react-icons/fa6";
 import { ApiProvider } from '../contextAPI/ContextApi';
-import { ToastContainer, toast } from 'react-toastify';
 const DoctorDetail = () => {
-    const { loading, doctor, handleSetBooking } = useContext(ApiProvider)
+    const { loading, doctor, handleSetBooking, } = useContext(ApiProvider)
     const { id } = useParams();
     const intId = parseInt(id);
     const single = doctor.find(singleDoc => singleDoc.id == intId)
+    
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+          navigate('/myBooking');
+    }
+
     if (loading) {
         return (
             <div className="max-w-[100px] mx-auto py-[80px]">
@@ -15,20 +20,11 @@ const DoctorDetail = () => {
             </div>
         );
     }
+
+  
     return (
         <div className="max-w-full lg:max-w-7xl mx-auto px-5 lg:px-[100px] pb-[80px]">
-            <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick={false}
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
-            />
+          
             <div className="w-full mx-auto text-center bg-white p-[50px] my-10 rounded-2xl">
                 <h1 className="text-3xl font-bold">Doctor’s Profile Details</h1>
                 <p className="py-6 text-gray-500">
@@ -75,7 +71,7 @@ const DoctorDetail = () => {
                 <button className="p-2 text-yellow-500 bg-yellow-100  rounded-2xl">
                     Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
                 </button>
-                <button onClick={() => handleSetBooking(single.id)} className="w-full my-2 p-2 text-white bg-blue-700  rounded-2xl">
+                <button onClick={() => (handleSetBooking(single.id),handleNavigate())} className="w-full my-2 p-2 text-white bg-blue-700  rounded-2xl">
                     Book Appointment Now
                 </button>
             </div>

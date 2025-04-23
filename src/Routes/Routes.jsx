@@ -1,7 +1,6 @@
-import React from 'react';
+
 import {
     createBrowserRouter,
-    RouterProvider,
   } from "react-router";
 import Roots from '../Pages/roots/Roots';
 import MyBookings from '../Pages/myBookings/MyBookings';
