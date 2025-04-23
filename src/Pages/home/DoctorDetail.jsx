@@ -2,15 +2,33 @@ import React, { useContext } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { FaRegRegistered } from "react-icons/fa6";
 import { ApiProvider } from '../contextAPI/ContextApi';
+import { toast } from 'react-toastify';
+
 const DoctorDetail = () => {
-    const { loading, doctor, handleSetBooking } = useContext(ApiProvider)
+    const { loading, doctor, handleSetBooking, getCartFromLocalStorage } = useContext(ApiProvider)
     const { id } = useParams();
     const intId = parseInt(id);
     const single = doctor.find(singleDoc => singleDoc.id == intId)
-    
+
+    const currentBooking = getCartFromLocalStorage();
     const navigate = useNavigate();
-    const handleNavigate = () => {
-          navigate('/myBooking');
+    const handleNavigate = (id) => {
+        if (!currentBooking.includes(id)) {
+            handleSetBooking(single.id)
+            navigate('/myBooking');
+        } 
+        else {
+            toast.warn('Your Booking is Already Confirmed', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
     }
 
     if (loading) {
@@ -21,10 +39,10 @@ const DoctorDetail = () => {
         );
     }
 
-  
+
     return (
         <div className="max-w-full lg:max-w-7xl mx-auto px-5 lg:px-[100px] pb-[80px]">
-          
+
             <div className="w-full mx-auto text-center bg-white p-[50px] my-10 rounded-2xl">
                 <h1 className="text-3xl font-bold">Doctor’s Profile Details</h1>
                 <p className="py-6 text-gray-500">
@@ -52,7 +70,7 @@ const DoctorDetail = () => {
                         <div className='grid grid-cols-1 lg:grid-cols-4 gap-3 items-center'>
                             <p className='font-bold' >Availability</p>
                             {
-                                single.availability.map((avail,index) => <button key={index} className='border-2 border-yellow-300 bg-yellow-50 text-yellow-300 p-2 rounded-full'>{avail.day}</button>)
+                                single.availability.map((avail, index) => <button key={index} className='border-2 border-yellow-300 bg-yellow-50 text-yellow-300 p-2 rounded-full'>{avail.day}</button>)
                             }
                         </div><br />
                         <p className='text-blue-500'><span className='font-bold text-black'>Consulation Fee :</span> <span className='font-bold text-blue-600'>{single.fee}</span> <span className='text-gray-500'>(inclu VAT)</span> Per Consultation</p>
@@ -71,7 +89,7 @@ const DoctorDetail = () => {
                 <button className="p-2 text-yellow-500 bg-yellow-100  rounded-2xl">
                     Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.
                 </button>
-                <button onClick={() => (handleSetBooking(single.id),handleNavigate())} className="w-full my-2 p-2 text-white bg-blue-700  rounded-2xl">
+                <button onClick={() => handleNavigate(single.id)} className="w-full my-2 p-2 text-white bg-blue-700  rounded-2xl">
                     Book Appointment Now
                 </button>
             </div>

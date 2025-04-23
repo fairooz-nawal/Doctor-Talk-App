@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import logo from '../../../C001-assets/logo.png';
 const Footer = () => {
     const link = <>
-        <NavLink to="/home" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>Home</NavLink>
+        <NavLink to="/" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>Home</NavLink>
         <NavLink to="/myBooking" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>My Bookings</NavLink>
         <NavLink to="/blogs" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>Blogs</NavLink>
         <NavLink to="/contactUs" className={({isActive})=> isActive ? 'bg-blue-700 text-white p-2 rounded-2xl font-medium': 'p-2 rounded-2xl font-medium'}>Contact Us</NavLink>

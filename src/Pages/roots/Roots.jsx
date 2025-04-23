@@ -7,16 +7,6 @@ const Roots = () => {
     return (
         <div className='jakarta bg-gray-200'>
               <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick={false}
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
             />
             <Navbar></Navbar>
             <Outlet></Outlet>

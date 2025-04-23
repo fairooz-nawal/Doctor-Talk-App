@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 export const ApiProvider = createContext('');
 
@@ -18,10 +18,19 @@ const ContextApi = ({children}) => {
     },[])
 
     const handleSetBooking = (id)=>{
-        const newBooking = [...booking,id];
-        setBooking(newBooking);
-        toast("Your Booking is Confirmed");
-        addItemToCartLocalStorage(id);
+            const newBooking = [...booking,id];
+            setBooking(newBooking);
+            toast.success('Your booking is Confirmed', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+            addItemToCartLocalStorage(id);
     }
 
     const getCartFromLocalStorage = ()=>{
@@ -40,7 +49,6 @@ const ContextApi = ({children}) => {
     const addItemToCartLocalStorage = (id)=>{
         const booking = getCartFromLocalStorage();
         booking.push(id);
-        toast("Your Booking is Confirmed");
         saveCartToLocalStorage(booking);
     }
 
@@ -49,7 +57,16 @@ const ContextApi = ({children}) => {
         const remaining = booking.filter(single => single !== id);
         saveCartToLocalStorage(remaining);
         setBooking(remaining);
-        toast("Your Booking is Cancelled");
+        toast.warn('Your Booking is Cancelled', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
     }
 
     return (
