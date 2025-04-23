@@ -17,7 +17,6 @@ const ConfirmContainer = ({ bookedDoctor }) => {
     };
     const TriangleBar = (props) => {
         const { fill, x, y, width, height } = props;
-    
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
     };
     return (

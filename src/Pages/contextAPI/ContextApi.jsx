@@ -8,6 +8,8 @@ const ContextApi = ({ children }) => {
     const [loading, setloading] = useState(true);
     const [booking, setBooking] = useState([]);
     const [error,setError] =useState([]);
+    const [validId,setValidId] = useState([])
+    const [invalid,setInvalid] = useState([])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -17,6 +19,8 @@ const ContextApi = ({ children }) => {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
+                const doctorIds = data.map((doctor)=> doctor.id);
+                setValidId(doctorIds);
                 setDoctor(data);
                 setloading(false);
             } catch (error) {
@@ -80,9 +84,13 @@ const ContextApi = ({ children }) => {
         });
     }
 
+    const handleInvalid = (id) =>{
+        setInvalid(id)
+    }
+
     return (
         <div>
-            <ApiProvider.Provider value={{ doctor, loading, getCartFromLocalStorage, handleDeleteBooking, handleSetBooking,error }}>
+            <ApiProvider.Provider value={{ doctor, loading, getCartFromLocalStorage, handleDeleteBooking, handleSetBooking,error,validId,handleInvalid,invalid }}>
                 {children}
             </ApiProvider.Provider>
         </div>

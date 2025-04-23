@@ -8,6 +8,7 @@ import Home from '../Pages/home/Home';
 import Error from '../Pages/Error/Error';
 import DoctorDetail from '../Pages/home/DoctorDetail';
 import BlogsContainer from "../Pages/Blogs/BlogsContainer";
+import Nodoctor from "../Pages/Error/Nodoctor";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -32,11 +33,11 @@ const router = createBrowserRouter([
           path:"/detail/:id",
           Component:DoctorDetail
         },
-        // {
-        //   path:"/detail/:id(13|14|15|...)",
-        //   Component:Error
-        // },
       ]
+    },
+    {
+      path:"/not-found",
+      Component:Nodoctor
     },
     {
       path:"*",
