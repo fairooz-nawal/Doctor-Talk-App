@@ -1,8 +1,8 @@
 # React + Vite
 
-# 🏥 MedConnect — Medical Appointment Booking Application
+# 🏥 Doctor Talk App — Medical Appointment Booking Application
 
-**MedConnect** is a modern, responsive, and production-grade **React-based web application** designed for scheduling and managing doctor appointments with a seamless user experience. Built with **cutting-edge frontend technologies**, this project integrates interactive UI components, client-side routing, persistent state management, and real-time data visualization using **Recharts**. Ideal for healthcare startups, clinic management platforms, or developers exploring full-stack healthcare solutions.
+**Doctor Talk App** is a modern, responsive, and production-grade **React-based web application** designed for scheduling and managing doctor appointments with a seamless user experience. Built with **cutting-edge frontend technologies**, this project integrates interactive UI components, client-side routing, persistent state management, and real-time data visualization using **Recharts**. Ideal for healthcare startups, clinic management platforms, or developers exploring full-stack healthcare solutions.
 
 ## 🔗 Live Demo
 
